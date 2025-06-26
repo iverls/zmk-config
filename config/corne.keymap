@@ -61,9 +61,9 @@
 // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  BT5   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp  TAB  &kp EXCL &kp MS_ACCEL0 &kp MS_ACCEL1 &kp MS_ACCEL2 &rgb_ug_hue_up   &kp MS_BTN4 &kp MS_BTN5  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3
-   &kp LCTRL &rgb_ug_saturation_up   &kp MS_BTN3 &kp MS_BTN2   &kp MS_BTN1   &rgb_ug_hue_down      &kp MS_LEFT &kp MS_DOWN &kp MS_UP  &kp MS_RIGHT &trans &bt BT_SEL 4
-   &kp LSHFT &rgb_ug_saturation_down   &rgb_ug_mode_next &rgb_ug_brt_down   &rgb_ug_brt_up   &rgb_ug_toggle      &kp MS_WH_LEFT &kp MS_WH_DOWN  &kp MS_WH_UP  &kp MS_WH_RIGHT &trans &trans
+   &kp  TAB  &kp EXCL &mkp MS_ACCEL0 &mkp MS_ACCEL1 &mkp MS_ACCEL2 &rgb_ug_hue_up   &mkp MS_BTN4 &mkp MS_BTN5  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3
+   &kp LCTRL &rgb_ug_saturation_up   &mkp MS_BTN3 &mkp MS_BTN2   &mkp MS_BTN1   &rgb_ug_hue_down      &mkp MS_LEFT &mkp MS_DOWN &mkp MS_UP  &mkp MS_RIGHT &trans &bt BT_SEL 4
+   &kp LSHFT &rgb_ug_saturation_down   &rgb_ug_mode_next &rgb_ug_brt_down   &rgb_ug_brt_up   &rgb_ug_toggle      &mkp MS_WH_LEFT &mkp MS_WH_DOWN  &mkp MS_WH_UP  &mkp MS_WH_RIGHT &trans &trans
                              &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
