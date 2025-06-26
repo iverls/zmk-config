@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/pointing.h>
 
 
 / {
@@ -61,9 +62,9 @@
 // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  BT5   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp  TAB  &kp EXCL &mkp MS_ACCEL0 &mkp MS_ACCEL1 &mkp MS_ACCEL2 &rgb_ug_hue_up   &mkp MS_BTN4 &mkp MS_BTN5  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3
-   &kp LCTRL &rgb_ug_saturation_up   &mkp MS_BTN3 &mkp MS_BTN2   &mkp MS_BTN1   &rgb_ug_hue_down      &mkp MS_LEFT &mkp MS_DOWN &mkp MS_UP  &mkp MS_RIGHT &trans &bt BT_SEL 4
-   &kp LSHFT &rgb_ug_saturation_down   &rgb_ug_mode_next &rgb_ug_brt_down   &rgb_ug_brt_up   &rgb_ug_toggle      &mkp MS_WH_LEFT &mkp MS_WH_DOWN  &mkp MS_WH_UP  &mkp MS_WH_RIGHT &trans &trans
+   &kp  TAB  &kp EXCL &mkp MS_ACCEL0 &mkp MS_ACCEL1 &mkp MS_ACCEL2 &rgb_ug_hue_up   &mkp MB4 &mkp MB5  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3
+   &kp LCTRL &rgb_ug_saturation_up   &mkp MB3 &mkp MB2   &mkp MB1   &rgb_ug_hue_down      &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP  &mmv MOVE_RIGHT &trans &bt BT_SEL 4
+   &kp LSHFT &rgb_ug_saturation_down   &rgb_ug_mode_next &rgb_ug_brt_down   &rgb_ug_brt_up   &rgb_ug_toggle      &msc MOVE_LEFT &msc MOVE_DOWN  &msc MOVE_UP  &msc MOVE_RIGHT &trans &trans
                              &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
                 };
@@ -76,5 +77,19 @@ conditional_layers {
         if_layers = <1 2>;
         then_layer = <3>;
     };
+};
+
+&mmv {
+    x-input-code = <INPUT_REL_X>;
+    y-input-code = <INPUT_REL_Y>;
+    time-to-max-speed-ms = <400>;
+    acceleration-exponent = <2>;
+};
+
+&msc {
+    x-input-code = <INPUT_REL_HWHEEL>;
+    y-input-code = <INPUT_REL_WHEEL>;
+    time-to-max-speed-ms = <500>;
+    acceleration-exponent = <1>;
 };
 };
