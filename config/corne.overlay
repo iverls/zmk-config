@@ -1,3 +1,6 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/pointing.h>
+
 &mmv {
     x-input-code = <0x00>;  // REL_X
     y-input-code = <0x01>;  // REL_Y
